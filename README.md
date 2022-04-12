@@ -44,6 +44,7 @@ The purpose of this project is to empower every student & staff to become all th
 ![](/display/overall_architecture.png)
 
 #### Using Device to login on Browser Architecture
+![](/display/lazy-version.png)
 ![](/display/coolthing.png)
 
 ### Research Summary
