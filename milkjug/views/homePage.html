@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Milkshake</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <style type="text/css">
+    .logo {
+      background-image: url(../static/img/PinClipart.com_go_drink.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: 100px 100px;
+      background-size: 100px 100px;
+      background-position: center center;
+      text-align: center;
+      font-size: 42px;
+      padding: 250px 0 70px;
+      font-weight: normal;
+      text-shadow: 0px 1px 2px #ddd;
+    }
+
+    *,
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      margin: 0px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      background-color: #fff;
+    }
+
+    header,
+    footer {
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header {
+      padding: 100px 0;
+    }
+
+    footer {
+      line-height: 1.8;
+      text-align: center;
+      padding: 50px 0;
+      color: #999;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .backdrop {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0px 0px 100px #ddd;
+      z-index: -1;
+      top: 0px;
+      left: 0px;
+    }
+
+
+    .button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="logo"><a href="http://{{.Github}}">{{.ProjectName}}</a></h1>
+    <div class="description">
+      There are five applications related with Dixie State University or Utah Tech University in IOS platform which is
+      App Store, Trailblazer Nation, Dixie State Traditions, Trailblazer Athletics, DSU Safe, Dixie Rec. All of them
+      have not good ratings and only have few ratings reports. Thus, those applications or the information adn function
+      they provide are not attracted to students. To sum up, my proposal application is having the most important
+      functionalities of those five apps in the App Store with other new features I state below and will become more
+      popular with the university's students.
+    </div>
+
+    <a class="button" href="{{.LoginPage}}">login</a>
+    <a class="button" href="{{.EventPage}}">event</a>
+
+    <body>
+
+    </body>
+    <footer>
+      <div class="author">
+        Created With:
+        <a href="http://{{.Website}}">Beego</a>
+        /
+        <a href="http://{{.Github}}">{{.Author}}</a>
+        /
+        Contact me:
+        <a class="email" href="mailto:{{.Email}}">{{.Email}}</a>
+      </div>
+    </footer>
+    <div class="backdrop"></div>
+</body>
+
+</html>

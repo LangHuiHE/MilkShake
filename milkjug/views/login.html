@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- header -->
+
+
+
+    <!-- localize.jsp MUST already be included in the calling script -->
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/static/img/PinClipart.com_go_drink.ico" type="image/x-icon" />
+    <link href="/static/css/wso2-default.min.css" rel="stylesheet">
+
+    <title>DSU tester</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            flex-direction: column;
+            display: flex;
+            background: #f9f9f9;
+            /*background-image: url("/authenticationendpoint/libs/theme/assets/images/i-N6dCQpL-X4.jpg"); 
+            background-image: url("/authenticationendpoint/libs/theme/assets/images/i-SmmvPLL-X2.jpg");  */
+            background-image: url("/static/img/i-WRCqdsL-X4.jpg");
+            font-family: 'Roboto Light', Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: 0;
+            left: 0;
+            padding-top: 60px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        main {
+            flex-shrink: 0;
+        }
+
+        main.center-segment {
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        main.center-segment>.ui.container.medium {
+            max-width: 500px !important;
+        }
+
+        main.center-segment>.ui.container.large {
+            max-width: 700px !important;
+        }
+
+        main.center-segment>.ui.container>.ui.segment {
+            padding: 1rem;
+            border-radius: 8px !important;
+            opacity: 1;
+        }
+
+        main.center-segment>.ui.container>.ui.segment .segment-form .buttons {
+            margin-top: 1em;
+        }
+
+        main.center-segment>.ui.container>.ui.segment .segment-form .buttons.align-right button,
+        main.center-segment>.ui.container>.ui.segment .segment-form .buttons.align-right input {
+            margin: 0 0 0 0.25em;
+            opacity: 1;
+        }
+
+        main.center-segment>.ui.container>.ui.segment .segment-form .column .buttons.align-left button.link-button,
+        main.center-segment>.ui.container>.ui.segment .segment-form .column .buttons.align-left input.link-button {
+            padding: .78571429em 1.5em .78571429em 0;
+        }
+
+        main.center-segment>.ui.container>.ui.segment .segment-form {
+            text-align: left;
+        }
+
+        main.center-segment>.ui.container>.ui.segment .segment-form .align-center {
+            text-align: center;
+        }
+
+        main.center-segment>.ui.container>.ui.segment .segment-form .align-right {
+            text-align: right;
+        }
+
+        .cookie-policy-message {
+            font-size: 14px;
+        }
+
+        footer {
+            padding: 2rem 0;
+        }
+
+        body .product-title .product-title-text {
+            margin: 0;
+        }
+
+        body .center-segment .product-title .product-title-text {
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+
+        .ui.menu.fixed.app-header .product-logo {
+            padding-left: 0;
+        }
+
+        /* Table of content styling */
+
+        main #toc {
+            position: sticky;
+            top: 93px;
+        }
+
+        main .ui.segment.toc {
+            padding: 20px;
+        }
+
+        main .ui.segment.toc ul.ui.list.nav>li.sub {
+            margin-left: 20px;
+        }
+
+        main .ui.segment.toc ul.ui.list.nav>li>a {
+            color: rgba(0, 0, 0, .87);
+            text-decoration: none;
+        }
+
+        main .ui.segment.toc ul.ui.list.nav>li:before {
+            content: "\2219";
+            font-weight: bold;
+            font-size: 1.6em;
+            line-height: 0.5em;
+            display: inline-block;
+            width: 1em;
+            margin-left: -0.7em;
+        }
+
+        main .ui.segment.toc ul.ui.list.nav>li.sub:before {
+            content: "\2192";
+            margin-left: -1em;
+        }
+
+        main .ui.segment.toc ul.ui.list.nav>li:hover a {
+            color: #ff5000;
+            text-decoration: none;
+        }
+
+        main .ui.segment.toc ul.ui.list.nav>li:hover:before {
+            color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="center-segment">
+        <div class="ui container medium center aligned middle aligned">
+            <div class="ui segment">
+                <div class="theme-icon inline auto transparent product-logo">
+
+                    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="162.22096"
+                        height="48.139759" id="svg11698" version="1.1" inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+                        sodipodi:docname="DSU2_only.svg">
+                        <defs id="defs11700" />
+                        <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0"
+                            inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="1"
+                            inkscape:cx="-363.51806" inkscape:cy="-165.34872" inkscape:document-units="px"
+                            inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0"
+                            fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1920"
+                            inkscape:window-height="1136" inkscape:window-x="0" inkscape:window-y="27"
+                            inkscape:window-maximized="1" inkscape:document-rotation="0" />
+                        <metadata id="metadata11703">
+                            <rdf:RDF>
+                                <cc:Work rdf:about="">
+                                    <dc:format>image/svg+xml</dc:format>
+                                    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                    <dc:title></dc:title>
+                                </cc:Work>
+                            </rdf:RDF>
+                        </metadata>
+                        <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1"
+                            transform="translate(-588.17798,-294.61188)">
+                            <path inkscape:connector-curvature="0" id="path2004"
+                                style="fill:#8c3031;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25"
+                                d="m 738.62001,331.67474 h -13.63327 v 0.0159 c -0.0818,0.24992 -1.26071,3.74671 -4.35053,3.74671 h -4.19571 c -4.98309,0 -5.82576,-3.89933 -5.82576,-3.89933 h -3.25571 c -0.40033,-0.67679 -0.72988,-1.57255 -0.97539,-2.70055 h -13.80136 c 1.64997,7.4868 8.40689,12.96532 20.71531,12.96532 h 29.35666 v -2.72931 l -4.03424,-2.32898 v -5.06935 z M 721.30416,295.5678 v 2.7271 l 3.68258,2.13213 v 24.90218 h 13.63327 V 300.6283 l 4.03424,-2.3334 v -2.7271 z m -96.50783,35.96981 h -4.13819 c 0,0 -1.95962,3.89933 -5.9054,3.89933 h -4.73537 c -3.17608,0 -4.33283,-3.687 -4.35495,-3.75778 v -0.004 h -13.44748 v 5.06935 l -4.03646,2.32898 v 2.72931 h 30.68813 c 6.90732,0 16.13919,-3.24907 19.93457,-12.96532 h -12.83704 c -0.29637,1.03068 -0.6768,1.93086 -1.16781,2.70055 m 48.83119,0.19685 h -2.8023 c 0,0 -1.09924,5.30379 -8.95983,5.30379 -6.55344,0 -11.39498,-2.65411 -14.1088,-8.20119 h -5.24187 v 9.78923 c 0,0 7.5996,4.12493 21.07142,4.12493 9.71846,0 24.43549,-3.21147 24.71639,-13.91416 h -13.94735 c -0.0375,0.7343 -0.19906,1.78709 -0.72766,2.8974 m 32.20318,-9.49286 c 0,-7.8429 -0.004,-16.37365 -0.009,-21.62436 l 4.05194,-2.32234 v -2.7271 h -21.73051 v 2.7271 l 4.03424,2.3334 v 24.42444 l 0.004,0.27647 h 13.73944 c -0.0596,-0.93557 -0.0906,-1.95962 -0.0906,-3.08761 m -86.9641,-26.6738 h -30.68813 v 2.7271 l 4.03646,2.3334 v 24.70091 h 13.44748 v -23.54637 h 8.52411 c 11.01456,0 12.72203,4.29081 12.70434,16.83147 0.007,2.57449 -0.0641,4.80173 -0.27426,6.7149 h 13.24179 c 0.44236,-1.99501 0.69228,-4.19792 0.69228,-6.64412 0,-17.7206 -12.77511,-23.11729 -21.68407,-23.11729 m 23.062,12.91887 c 0,-8.86693 11.08754,-13.87435 23.32519,-13.87435 11.90368,0 19.51655,3.65825 19.51655,3.65825 v 9.58796 h -5.21754 c -0.69449,-4.34831 -6.07348,-7.60623 -13.77924,-7.60623 -6.52027,0 -11.69578,2.37764 -11.3618,5.70191 0.61487,6.11993 29.53581,5.78154 33.45725,19.375 h -21.80129 c -9.99714,-2.57228 -24.13912,-5.25072 -24.13912,-16.84254"
+                                inkscape:export-filename="/home/rhunt/Pictures/logos/DSU_3color.png"
+                                inkscape:export-xdpi="747.10999" inkscape:export-ydpi="747.10999" />
+                            <path inkscape:connector-curvature="0" id="path2008"
+                                style="fill:#bc3336;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25"
+                                d="m 721.30393,295.56736 v 2.7271 l 3.68479,2.13213 v 24.90439 h 13.63106 v -24.70312 l 4.03424,-2.3334 v -2.7271 z m -15.47346,26.67379 c 0,-7.84067 -0.004,-16.37363 -0.009,-21.62435 l 4.05194,-2.32234 v -2.7271 H 688.1429 v 2.7271 l 4.03645,2.3334 v 24.42444 l 0.002,0.27868 h 13.73944 c -0.0596,-0.93779 -0.0906,-1.96183 -0.0906,-3.08983 m -86.96188,-26.67379 h -30.68814 v 2.7271 l 4.03425,2.3334 v 24.70312 H 605.6619 V 301.7824 h 8.52412 c 11.01455,0 12.72203,4.29081 12.70433,16.83147 0.007,2.57449 -0.0641,4.80173 -0.27426,6.71711 h 13.2418 c 0.44235,-1.99501 0.69228,-4.20013 0.69228,-6.64412 0,-17.72281 -12.77512,-23.1195 -21.68186,-23.1195 m 23.05978,12.91887 c 0,-8.86472 11.08754,-13.87435 23.3252,-13.87435 11.90367,0 19.51654,3.65825 19.51654,3.65825 v 9.58796 h -5.21532 c -0.6967,-4.34831 -6.0757,-7.60623 -13.77925,-7.60623 -6.52247,0 -11.69799,2.37764 -11.36401,5.70191 0.61487,6.11994 29.53581,5.78154 33.45726,19.37721 h -21.8013 C 656.06998,322.75649 641.928,320.08027 641.928,308.48623"
+                                inkscape:export-filename="/home/rhunt/Pictures/logos/DSU_3color.png"
+                                inkscape:export-xdpi="747.10999" inkscape:export-ydpi="747.10999" />
+                            <path inkscape:connector-curvature="0" id="path2012"
+                                style="fill:#bc3336;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25"
+                                d="m 745.18295,338.85212 h -1.03068 v -0.36936 h 2.50592 v 0.36936 h -1.03289 v 3.01242 h -0.44235 z"
+                                inkscape:export-filename="/home/rhunt/Pictures/logos/DSU_3color.png"
+                                inkscape:export-xdpi="747.10999" inkscape:export-ydpi="747.10999" />
+                            <path inkscape:connector-curvature="0" id="path2016"
+                                style="fill:#bc3336;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.25"
+                                d="m 749.88847,340.37933 c -0.0265,-0.4711 -0.0575,-1.03731 -0.0531,-1.45976 h -0.0124 c -0.11501,0.39591 -0.25656,0.81836 -0.42908,1.28283 l -0.59496,1.64112 h -0.33176 l -0.54631,-1.61016 c -0.16154,-0.47553 -0.29858,-0.91346 -0.39148,-1.31379 h -0.0106 c -0.0106,0.42245 -0.0354,0.98866 -0.0641,1.49515 l -0.0929,1.45091 h -0.41581 l 0.23445,-3.38398 h 0.55736 l 0.57948,1.6367 c 0.13943,0.41581 0.25435,0.78738 0.34061,1.13905 h 0.0159 c 0.0864,-0.3384 0.2057,-0.71218 0.3561,-1.13905 l 0.60381,-1.6367 h 0.55736 l 0.2079,3.38398 h -0.42465 l -0.0841,-1.4863 z"
+                                inkscape:export-filename="/home/rhunt/Pictures/logos/DSU_3color.png"
+                                inkscape:export-xdpi="747.10999" inkscape:export-ydpi="747.10999" />
+                        </g>
+                    </svg>
+                </div>
+
+
+
+
+                <h3 class="ui header text-right-baseline">
+                    !FAKE!
+
+                </h3>
+                <h3 class="ui header text-right-baseline">
+                    <a class="button" href="{{.homePage}}">home</a>
+                    <a class="button" href="{{.eventPage}}">event</a>
+                </h3>
+
+                <h3 class="ui header text-right-baseline">
+                    Sign In
+
+                </h3>
+
+                <div class="segment-form text-right-baseline">
+                    <form class="ui large form" id="login-form">
+                        <div class="ui visible negative message" style="display: none;" id="error-msg"></div>
+                        <div class="field">
+                            <div class="ui fluid left icon input">
+                                <input class="text-right-baseline" type="text" id="userID" value="" name="Id"
+                                    tabindex="1" placeholder="Digital ID" required autofocus>
+                                <i aria-hidden="true" class="user icon"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui fluid left icon input">
+                                <input class="text-right-baseline" type="password" id="UserPassword" name="UserPassword"
+                                    value="" autocomplete="off" tabindex="2" placeholder="Password">
+                                <i aria-hidden="true" class="lock icon"></i>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <div class="field">
+                                Forgot
+                                <a id="usernameRecoverLink" tabindex="5">
+                                    Digital ID
+                                </a>
+                                or
+                                <a id="passwordRecoverLink" tabindex="6">
+                                    Password
+                                </a>
+                                ?
+                            </div>
+                        </div>
+                        <div class="ui divider hidden"></div>
+                        <div class="buttons">
+                            <button type="submit" class="ui primary large button" tabindex="4" role="button">
+                                Continue
+                            </button>
+                        </div>
+                </div>
+                </form>
+
+                <img style="display:none" id="QrCodeImage" />
+                <button id="showQrCodeImage">Use QR Code to Login</button>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- product-footer -->
+
+
+
+    <!-- localize.jsp MUST already be included in the calling script -->
+
+
+    <!-- footer -->
+
+    <footer class="footer" style="text-align: center">
+
+        <div class="container-fluid">
+            <p>DSU &copy;
+                <script>document.write(new Date().getFullYear());</script>
+            </p>
+        </div>
+    </footer>
+
+
+
+    <!-- footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/static/js/login.js"></script>
+</body>
+
+</html>

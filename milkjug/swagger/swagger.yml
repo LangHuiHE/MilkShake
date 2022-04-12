@@ -1,0 +1,2000 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: |
+    beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /eventClock/:
+    get:
+      tags:
+      - eventClock
+      description: |-
+        get EventClock
+        <br>
+      operationId: EventClockController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EventClock'
+        "403":
+          description: ""
+    post:
+      tags:
+      - eventClock
+      description: |-
+        create EventClock
+        <br>
+      operationId: EventClockController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for EventClock content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EventClock'
+      responses:
+        "201":
+          description: '{int} models.EventClock'
+        "403":
+          description: body is empty
+  /eventClock/{id}:
+    get:
+      tags:
+      - eventClock
+      description: |-
+        get EventClock by id
+        <br>
+      operationId: EventClockController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EventClock'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - eventClock
+      description: |-
+        update the EventClock
+        <br>
+      operationId: EventClockController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for EventClock content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EventClock'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EventClock'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - eventClock
+      description: |-
+        delete the EventClock
+        <br>
+      operationId: EventClockController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /eventHourType/:
+    get:
+      tags:
+      - eventHourType
+      description: |-
+        get EventHourType
+        <br>
+      operationId: EventHourTypeController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EventHourType'
+        "403":
+          description: ""
+    post:
+      tags:
+      - eventHourType
+      description: |-
+        create EventHourType
+        <br>
+      operationId: EventHourTypeController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for EventHourType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EventHourType'
+      responses:
+        "201":
+          description: '{int} models.EventHourType'
+        "403":
+          description: body is empty
+  /eventHourType/{id}:
+    get:
+      tags:
+      - eventHourType
+      description: |-
+        get EventHourType by id
+        <br>
+      operationId: EventHourTypeController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EventHourType'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - eventHourType
+      description: |-
+        update the EventHourType
+        <br>
+      operationId: EventHourTypeController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for EventHourType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EventHourType'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EventHourType'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - eventHourType
+      description: |-
+        delete the EventHourType
+        <br>
+      operationId: EventHourTypeController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /events/:
+    get:
+      tags:
+      - events
+      description: |-
+        get Events
+        <br>
+      operationId: EventsController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Events'
+        "403":
+          description: ""
+    post:
+      tags:
+      - events
+      description: |-
+        create Events
+        <br>
+      operationId: EventsController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Events content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Events'
+      responses:
+        "201":
+          description: '{int} models.Events'
+        "403":
+          description: body is empty
+  /events/{id}:
+    get:
+      tags:
+      - events
+      description: |-
+        get Events by id
+        <br>
+      operationId: EventsController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Events'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - events
+      description: |-
+        update the Events
+        <br>
+      operationId: EventsController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Events content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Events'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Events'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - events
+      description: |-
+        delete the Events
+        <br>
+      operationId: EventsController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /payment/:
+    get:
+      tags:
+      - payment
+      description: |-
+        get Payment
+        <br>
+      operationId: PaymentController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Payment'
+        "403":
+          description: ""
+    post:
+      tags:
+      - payment
+      description: |-
+        create Payment
+        <br>
+      operationId: PaymentController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Payment content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Payment'
+      responses:
+        "201":
+          description: '{int} models.Payment'
+        "403":
+          description: body is empty
+  /payment/{id}:
+    get:
+      tags:
+      - payment
+      description: |-
+        get Payment by id
+        <br>
+      operationId: PaymentController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Payment'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - payment
+      description: |-
+        update the Payment
+        <br>
+      operationId: PaymentController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Payment content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Payment'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Payment'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - payment
+      description: |-
+        delete the Payment
+        <br>
+      operationId: PaymentController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /paymentMethod/:
+    get:
+      tags:
+      - paymentMethod
+      description: |-
+        get PaymentMethod
+        <br>
+      operationId: PaymentMethodController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentMethod'
+        "403":
+          description: ""
+    post:
+      tags:
+      - paymentMethod
+      description: |-
+        create PaymentMethod
+        <br>
+      operationId: PaymentMethodController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for PaymentMethod content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PaymentMethod'
+      responses:
+        "201":
+          description: '{int} models.PaymentMethod'
+        "403":
+          description: body is empty
+  /paymentMethod/{id}:
+    get:
+      tags:
+      - paymentMethod
+      description: |-
+        get PaymentMethod by id
+        <br>
+      operationId: PaymentMethodController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentMethod'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - paymentMethod
+      description: |-
+        update the PaymentMethod
+        <br>
+      operationId: PaymentMethodController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for PaymentMethod content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PaymentMethod'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentMethod'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - paymentMethod
+      description: |-
+        delete the PaymentMethod
+        <br>
+      operationId: PaymentMethodController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /paymentRuns/:
+    get:
+      tags:
+      - paymentRuns
+      description: |-
+        get PaymentRuns
+        <br>
+      operationId: PaymentRunsController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentRuns'
+        "403":
+          description: ""
+    post:
+      tags:
+      - paymentRuns
+      description: |-
+        create PaymentRuns
+        <br>
+      operationId: PaymentRunsController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for PaymentRuns content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PaymentRuns'
+      responses:
+        "201":
+          description: '{int} models.PaymentRuns'
+        "403":
+          description: body is empty
+  /paymentRuns/{id}:
+    get:
+      tags:
+      - paymentRuns
+      description: |-
+        get PaymentRuns by id
+        <br>
+      operationId: PaymentRunsController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentRuns'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - paymentRuns
+      description: |-
+        update the PaymentRuns
+        <br>
+      operationId: PaymentRunsController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for PaymentRuns content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PaymentRuns'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentRuns'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - paymentRuns
+      description: |-
+        delete the PaymentRuns
+        <br>
+      operationId: PaymentRunsController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /paymentType/:
+    get:
+      tags:
+      - paymentType
+      description: |-
+        get PaymentType
+        <br>
+      operationId: PaymentTypeController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentType'
+        "403":
+          description: ""
+    post:
+      tags:
+      - paymentType
+      description: |-
+        create PaymentType
+        <br>
+      operationId: PaymentTypeController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for PaymentType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PaymentType'
+      responses:
+        "201":
+          description: '{int} models.PaymentType'
+        "403":
+          description: body is empty
+  /paymentType/{id}:
+    get:
+      tags:
+      - paymentType
+      description: |-
+        get PaymentType by id
+        <br>
+      operationId: PaymentTypeController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentType'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - paymentType
+      description: |-
+        update the PaymentType
+        <br>
+      operationId: PaymentTypeController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for PaymentType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PaymentType'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PaymentType'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - paymentType
+      description: |-
+        delete the PaymentType
+        <br>
+      operationId: PaymentTypeController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /semester/:
+    get:
+      tags:
+      - semester
+      description: |-
+        get Semester
+        <br>
+      operationId: SemesterController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Semester'
+        "403":
+          description: ""
+    post:
+      tags:
+      - semester
+      description: |-
+        create Semester
+        <br>
+      operationId: SemesterController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Semester content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Semester'
+      responses:
+        "201":
+          description: '{int} models.Semester'
+        "403":
+          description: body is empty
+  /semester/{id}:
+    get:
+      tags:
+      - semester
+      description: |-
+        get Semester by id
+        <br>
+      operationId: SemesterController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Semester'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - semester
+      description: |-
+        update the Semester
+        <br>
+      operationId: SemesterController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Semester content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Semester'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Semester'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - semester
+      description: |-
+        delete the Semester
+        <br>
+      operationId: SemesterController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /studentDepartment/:
+    get:
+      tags:
+      - studentDepartment
+      description: |-
+        get StudentDepartment
+        <br>
+      operationId: StudentDepartmentController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.StudentDepartment'
+        "403":
+          description: ""
+    post:
+      tags:
+      - studentDepartment
+      description: |-
+        create StudentDepartment
+        <br>
+      operationId: StudentDepartmentController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for StudentDepartment content
+        required: true
+        schema:
+          $ref: '#/definitions/models.StudentDepartment'
+      responses:
+        "201":
+          description: '{int} models.StudentDepartment'
+        "403":
+          description: body is empty
+  /studentDepartment/{id}:
+    get:
+      tags:
+      - studentDepartment
+      description: |-
+        get StudentDepartment by id
+        <br>
+      operationId: StudentDepartmentController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.StudentDepartment'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - studentDepartment
+      description: |-
+        update the StudentDepartment
+        <br>
+      operationId: StudentDepartmentController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for StudentDepartment content
+        required: true
+        schema:
+          $ref: '#/definitions/models.StudentDepartment'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.StudentDepartment'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - studentDepartment
+      description: |-
+        delete the StudentDepartment
+        <br>
+      operationId: StudentDepartmentController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /studentMajor/:
+    get:
+      tags:
+      - studentMajor
+      description: |-
+        get StudentMajor
+        <br>
+      operationId: StudentMajorController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.StudentMajor'
+        "403":
+          description: ""
+    post:
+      tags:
+      - studentMajor
+      description: |-
+        create StudentMajor
+        <br>
+      operationId: StudentMajorController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for StudentMajor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.StudentMajor'
+      responses:
+        "201":
+          description: '{int} models.StudentMajor'
+        "403":
+          description: body is empty
+  /studentMajor/{id}:
+    get:
+      tags:
+      - studentMajor
+      description: |-
+        get StudentMajor by id
+        <br>
+      operationId: StudentMajorController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.StudentMajor'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - studentMajor
+      description: |-
+        update the StudentMajor
+        <br>
+      operationId: StudentMajorController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for StudentMajor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.StudentMajor'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.StudentMajor'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - studentMajor
+      description: |-
+        delete the StudentMajor
+        <br>
+      operationId: StudentMajorController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /students/:
+    get:
+      tags:
+      - students
+      description: |-
+        get Students
+        <br>
+      operationId: StudentsController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Students'
+        "403":
+          description: ""
+    post:
+      tags:
+      - students
+      description: |-
+        create Students
+        <br>
+      operationId: StudentsController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Students content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Students'
+      responses:
+        "201":
+          description: '{int} models.Students'
+        "403":
+          description: body is empty
+  /students/{id}:
+    get:
+      tags:
+      - students
+      description: |-
+        get Students by id
+        <br>
+      operationId: StudentsController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Students'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - students
+      description: |-
+        update the Students
+        <br>
+      operationId: StudentsController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Students content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Students'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Students'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - students
+      description: |-
+        delete the Students
+        <br>
+      operationId: StudentsController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /userStatusType/:
+    get:
+      tags:
+      - userStatusType
+      description: |-
+        get UserStatusType
+        <br>
+      operationId: UserStatusTypeController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.UserStatusType'
+        "403":
+          description: ""
+    post:
+      tags:
+      - userStatusType
+      description: |-
+        create UserStatusType
+        <br>
+      operationId: UserStatusTypeController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for UserStatusType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserStatusType'
+      responses:
+        "201":
+          description: '{int} models.UserStatusType'
+        "403":
+          description: body is empty
+  /userStatusType/{id}:
+    get:
+      tags:
+      - userStatusType
+      description: |-
+        get UserStatusType by id
+        <br>
+      operationId: UserStatusTypeController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.UserStatusType'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - userStatusType
+      description: |-
+        update the UserStatusType
+        <br>
+      operationId: UserStatusTypeController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for UserStatusType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserStatusType'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.UserStatusType'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - userStatusType
+      description: |-
+        delete the UserStatusType
+        <br>
+      operationId: UserStatusTypeController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /userType/:
+    get:
+      tags:
+      - userType
+      description: |-
+        get UserType
+        <br>
+      operationId: UserTypeController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.UserType'
+        "403":
+          description: ""
+    post:
+      tags:
+      - userType
+      description: |-
+        create UserType
+        <br>
+      operationId: UserTypeController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for UserType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserType'
+      responses:
+        "201":
+          description: '{int} models.UserType'
+        "403":
+          description: body is empty
+  /userType/{id}:
+    get:
+      tags:
+      - userType
+      description: |-
+        get UserType by id
+        <br>
+      operationId: UserTypeController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.UserType'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - userType
+      description: |-
+        update the UserType
+        <br>
+      operationId: UserTypeController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for UserType content
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserType'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.UserType'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - userType
+      description: |-
+        delete the UserType
+        <br>
+      operationId: UserTypeController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /users/:
+    get:
+      tags:
+      - users
+      description: |-
+        get Users
+        <br>
+      operationId: UsersController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Users'
+        "403":
+          description: ""
+    post:
+      tags:
+      - users
+      description: |-
+        create Users
+        <br>
+      operationId: UsersController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Users content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Users'
+      responses:
+        "201":
+          description: '{int} models.Users'
+        "403":
+          description: body is empty
+  /users/{id}:
+    get:
+      tags:
+      - users
+      description: |-
+        get Users by id
+        <br>
+      operationId: UsersController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Users'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - users
+      description: |-
+        update the Users
+        <br>
+      operationId: UsersController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Users content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Users'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Users'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - users
+      description: |-
+        delete the Users
+        <br>
+      operationId: UsersController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.EventClock:
+    title: EventClock
+    type: object
+    properties:
+      EndTimeStamp:
+        type: string
+        format: datetime
+      EventID:
+        type: integer
+        format: int64
+      HourType:
+        type: integer
+        format: int64
+      Id:
+        type: integer
+        format: int64
+      Note:
+        type: string
+      StartTimeStamp:
+        type: string
+        format: datetime
+      UserID:
+        type: integer
+        format: int64
+  models.EventHourType:
+    title: EventHourType
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.Events:
+    title: Events
+    type: object
+    properties:
+      EndDate:
+        type: string
+        format: datetime
+      EventDescription:
+        type: string
+      HostUserID:
+        type: integer
+        format: int64
+      Id:
+        type: integer
+        format: int64
+      Note:
+        type: string
+      StartDate:
+        type: string
+        format: datetime
+  models.Payment:
+    title: Payment
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      PaymentPlanType:
+        type: integer
+        format: int64
+      Semester:
+        type: integer
+        format: int64
+      TotalBalance:
+        type: integer
+        format: int64
+      UserID:
+        $ref: '#/definitions/models.Users'
+  models.PaymentMethod:
+    title: PaymentMethod
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.PaymentRuns:
+    title: PaymentRuns
+    type: object
+    properties:
+      Amount:
+        type: number
+        format: float
+      Id:
+        type: integer
+        format: int64
+      PaymentID:
+        type: integer
+        format: int64
+      PaymentMethod:
+        type: integer
+        format: int64
+      ProcessDate:
+        type: string
+        format: datetime
+      UserID:
+        type: integer
+        format: int64
+  models.PaymentType:
+    title: PaymentType
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.Semester:
+    title: Semester
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.StudentDepartment:
+    title: StudentDepartment
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.StudentMajor:
+    title: StudentMajor
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.Students:
+    title: Students
+    type: object
+    properties:
+      Credits:
+        type: integer
+        format: int64
+      Department:
+        type: integer
+        format: int64
+      Id:
+        type: integer
+        format: int64
+      Major:
+        type: integer
+        format: int64
+  models.UserStatusType:
+    title: UserStatusType
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.UserType:
+    title: UserType
+    type: object
+    properties:
+      Definition:
+        type: string
+      Id:
+        type: integer
+        format: int64
+  models.Users:
+    title: Users
+    type: object
+    properties:
+      AppAuthToken:
+        type: string
+      ContactAddress:
+        type: string
+      EmailAddress:
+        type: string
+      EnrollDate:
+        type: string
+        format: datetime
+      FirstName:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      LastName:
+        type: string
+      PermanentAddress:
+        type: string
+      PhoneNumber:
+        type: string
+      Ssn:
+        type: string
+      StatusType:
+        type: integer
+        format: int64
+      UserPassword:
+        type: string
+      UserType:
+        type: integer
+        format: int64
+tags:
+- name: eventClock
+  description: |
+    EventClockController operations for EventClock
+- name: eventHourType
+  description: |
+    EventHourTypeController operations for EventHourType
+- name: events
+  description: |
+    EventsController operations for Events
+- name: payment
+  description: |
+    PaymentController operations for Payment
+- name: paymentMethod
+  description: |
+    PaymentMethodController operations for PaymentMethod
+- name: paymentRuns
+  description: |
+    PaymentRunsController operations for PaymentRuns
+- name: paymentType
+  description: |
+    PaymentTypeController operations for PaymentType
+- name: semester
+  description: |
+    SemesterController operations for Semester
+- name: studentDepartment
+  description: |
+    StudentDepartmentController operations for StudentDepartment
+- name: studentMajor
+  description: |
+    StudentMajorController operations for StudentMajor
+- name: students
+  description: |
+    StudentsController operations for Students
+- name: users
+  description: |
+    UsersController operations for Users
+- name: userStatusType
+  description: |
+    UserStatusTypeController operations for UserStatusType
+- name: userType
+  description: |
+    UserTypeController operations for UserType

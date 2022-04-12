@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/static/img/PinClipart.com_go_drink.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <h1>Login!</h1>
+    <h1>Admin Page</h1>
+    <a class="button" href="{{.eventPage}}">event</a>
+    <a class="button" href="{{.homePage}}">home</a>
+    <button class="button" id="logoutButton">log Out</button>
+
+    <script>
+        var button = document.getElementById("logoutButton");
+        button.onclick = function () {
+            document.cookie = "jwt" + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;"
+            location.reload();
+        };
+    </script>
+</body>
+
+</html>
