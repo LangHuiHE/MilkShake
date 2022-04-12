@@ -23,7 +23,7 @@ Also, it's the first project involving different technologies, tools, and platfo
 Students and facilities in Dixie State University (Utah Tech University) couldn't find a good mobile application for their campus life. The applications developed or published by the university are old, which means most of them had the last update more than a year ago. Meanwhile, those applications don't have the functionality and information that are interesting to students and facilities.
 
 ## Solution Description
-The purpose of this project is to empower every student & staff to become all they can be with a great mobile application. The application makes the hectic student life more structured and ensures students and staff know what is happening around campus.
+The purpose of this project is to empower every student & staff to become all they can be with a great mobile application. The application makes the hectic student life more structured and ensures students and staff know what is happening around campus. Also, this project contains a basic data flow cycle including a database, server, cache, website, and an associated application in the IOS platform, which means from the source of data to present the data to users.
 
 ####  Feature of Solution
 * Event Rundown (like, dislike event)
