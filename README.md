@@ -1,37 +1,44 @@
 # MilkShake
 
-**MilkShake** is my senior project for my bachelor's degree in Computer Science at Utah Tech University (Dixie State University). 
+**MilkShake** is the senior project for my bachelor's degree in Computer Science at Utah Tech University (aka Dixie State University). 
 
-Also, it's the first project involving different technologies, tools, and platforms I have made, and it's fully designed and developed by myself. 
+Also, it's my first personal and self-designed project that integrates with multiple technologies, tools, and platforms and has completed a dataflow circle. This project could be considered a real product because it contains a database, server, cache management, webpages, and mobile application in the IOS platform. 
+
+**MilkShake** was born with the mission of solving the problem of students and faculties who couldn't find a good product for their campus life. 
+
 
 
 ## Deployment
-* MilkJug
-    1. Create Database
-    Using sql files at `setup/database` to create Database
-    **All records are generated randomly**
-    2. Cache: Redis
+1. Setup
+    * MilkJug
+        1. Database 
+        Using SQL files at `setup/database` to create a Database and run it in the background
+        **All data are generated randomly**
+        2. Cache: Redis
+        Run Redis in the background
+        Don't forget to update the config setting at `milkjug/conf/app.conf`
+    * Shaker
+        1. Update server address at `shaker/conf.swift`
+        2. Build and install on your device
+2. Run
+    * Using [bee](https://github.com/astaxie/bee) `bee run` to start server
 
-    Don't forget update config setting at `milkjug/conf/app.conf`
-* Shaker
-    1. Update server address at `shaker/conf.swift`
 
 ## Demo Screenshot at `display`
 
-
 ## Problem Description
-Students and facilities in Dixie State University (Utah Tech University) couldn't find a good mobile application for their campus life. The applications developed or published by the university are old, which means most of them had the last update more than a year ago. Meanwhile, those applications don't have the functionality and information that are interesting to students and facilities.
+Students and facilities in Utah Tech University (aka Dixie State University) couldn't find a good mobile application for their campus life. The applications developed or published by the university are old, which means most of them had the last update more than a year ago. Meanwhile, those applications don't have the functionality and information that are interesting to users.
 
 ## Solution Description
-The purpose of this project is to empower every student & staff to become all they can be with a great mobile application. The application makes the hectic student life more structured and ensures students and staff know what is happening around campus. Also, this project contains a basic data flow cycle including a database, server, cache, website, and an associated application in the IOS platform, which means from the source of data to present the data to users.
+In short, the solution is to make the applications or products we like. 
 
-####  Feature of Solution
+#### Feature of Application
 * Event Rundown (like, dislike event)
 * Student Information
 * Account Information
 * Qr Code for Authentication (Displaying or Scanning)
-    * Login on Website
-    * Sign up for event
+    * Login to Website
+    * Sign up for an event
  
 ### Technical Overview
 * Server (Golang, Beego)
@@ -40,10 +47,11 @@ The purpose of this project is to empower every student & staff to become all th
 * Mobile Application (Swift, SwiftUI)
 * Website (HTML, CSS, JS)
 
-#### Overall Architecture
+#### Architecture Chart
+##### Overall
 ![](/display/overall_architecture.png)
 
-#### Using Device to login on Browser Architecture
+##### Using Device to login on Browser
 ![](/display/lazy-version.png)
 ![](/display/coolthing.png)
 
@@ -52,11 +60,11 @@ The purpose of this project is to empower every student & staff to become all th
     1. https://beego.vip
     2. https://github.com/astaxie/beego
 
-* Bee (tool for managing beego framework and project)
+* Bee (tool for managing the Beego framework and project)
     https://github.com/astaxie/bee
 
 * SwiftUI (the language for the application)
-    1. https://www.hackingwithswift.com (cover basically most of the thing in the application: Qr Code, updating views, etc)
+    1. https://www.hackingwithswift.com (cover most of the things in the application: Qr Code, updating views, etc)
     2. https://github.com/twostraws (the author of the website above, **Paul Hudson**)
     3. https://github.com/twostraws/CodeScanner (for the pop up (slide over) QR Code scanner)
 
@@ -67,28 +75,28 @@ The purpose of this project is to empower every student & staff to become all th
 ### Further Work
 * Performance
     * Database
-        * Re-construction Tables
+        * Reconstructe Tables
             * keys, indexes, foreign keys, grants
     * Cache
-        * pre-load data
-            * events and others command static information
+        * Pre-load data
+            * events and others command static data
     * Server
-        * refactor controllers(handlers)
-        * organize router(path)
+        * Refactor controllers(handlers)
+        * Organize router(path)
     * Application
         * refactor the flow of views
-        * let server to process and finalize data instead do it on fly
+        * let the server process and finalize data instead do it on fly
     * Website
-        * using websocket for QR code login
+        * using WebSocket for the communication in the QR code login step
 
-* Facilities Version on App
-add other user types' version on the App. Like having the event QR code on the mobile device.
+* Faculty Version on the application
+add other user types' versions with functions like having the event QR code on mobile devices.
 
 * Security
-    * using other more secure authorization like OAuth
-    * shorten the expiry time for tokens
-    * using different tokens for the QR token image and actual token
-    * encrypting Information on communication
+    * Using other more secure authorization like OAuth?
+    * Shorten the expiry time for tokens
+    * Using different tokens for the QR token image and actual token
+    * Encrypting Information in communication
 
 * UI/UX
     * making it better and nicer
