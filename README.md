@@ -2,7 +2,7 @@
 
 **MilkShake** is the senior project for my bachelor's degree in Computer Science at Utah Tech University (aka Dixie State University). 
 
-Also, it's my first personal and self-designed project that integrates with multiple technologies, tools, and platforms and has completed a dataflow circle. This project could be considered a real product because it contains a database, server, cache management, webpages, and mobile application in the IOS platform. 
+Also, it's my first personal and self-designed project that integrates with multiple technologies, tools, and platforms and has completed a dataflow circle. This project could be a completed real product because it contains a database, server, cache management, webpages, and mobile application in the IOS platform. 
 
 **MilkShake** was born with the mission of solving the problem of students and faculties who couldn't find a good product for their campus life. 
 
