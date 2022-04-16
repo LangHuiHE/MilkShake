@@ -41,7 +41,7 @@ In short, the solution is to make the applications or products we like.
     * Sign up for an event
  
 ### Technical Overview
-* Server (Golang, Beego)
+* Server (Golang, [Beego](https://github.com/astaxie/beego))
 * Cache (Redis)
 * Database (MySQL)
 * Mobile Application (Swift, SwiftUI)
@@ -56,12 +56,13 @@ In short, the solution is to make the applications or products we like.
 ![](/display/coolthing.png)
 
 ### Research Summary
-* Beego (the framework for server)
+* go (the framework for server)
     1. https://beego.vip
     2. https://github.com/astaxie/beego
 
-* Bee (tool for managing the Beego framework and project)
-    https://github.com/astaxie/bee
+* [Bee (tool for managing the Beego framework and project)](https://github.com/astaxie/bee)
+
+* [Go-qrcode](https://github.com/skip2/go-qrcode)
 
 * SwiftUI (the language for the application)
     1. https://www.hackingwithswift.com (cover most of the things in the application: Qr Code, updating views, etc)
@@ -69,7 +70,7 @@ In short, the solution is to make the applications or products we like.
     3. https://github.com/twostraws/CodeScanner (for the pop up (slide over) QR Code scanner)
 
 * Idea for the events display
-    https://github.com/Ramotion/expanding-collection
+    1. https://github.com/Ramotion/expanding-collection
 
 
 ### Further Work
